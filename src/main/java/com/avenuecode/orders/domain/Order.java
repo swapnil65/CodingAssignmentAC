@@ -26,6 +26,7 @@ import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.FetchType.EAGER;
 import static javax.persistence.GenerationType.IDENTITY;
 
+@SuppressWarnings("serial")
 @Data
 @Entity
 @Table(name = "orders")

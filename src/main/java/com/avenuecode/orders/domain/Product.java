@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+@SuppressWarnings("serial")
 @Data
 @Entity
 @Table(name = "products")
