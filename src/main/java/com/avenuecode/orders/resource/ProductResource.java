@@ -19,30 +19,30 @@ import static org.springframework.http.ResponseEntity.ok;
 @RequestMapping("/products")
 public class ProductResource {
 
-    @Autowired
-    private ProductService productService;
+	@Autowired
+	private ProductService productService;
 
-    @GetMapping
-    public ResponseEntity<List<Product>> listProducts() {
-        return ok(productService.listProducts());
-    }
+	@GetMapping
+	public ResponseEntity<List<Product>> listProducts() {
+		return ok(productService.listProducts());
+	}
 
-    @GetMapping(value = "/{productId}")
-    public ResponseEntity<Product> getProduct(@PathVariable String productId) {
-        Product product = productService.getProduct(productId);
-        if (product == null) {
-            return notFound().build();
-        }
-        return ok(product);
-    }
-    
-    @GetMapping(value = "/search/priceMoreThanThirty")
-    public ResponseEntity<List<Product>> getProductsWithPriceMoreThanThirty() {
-        List<Product> result = productService.getProductsWithPriceMoreThan30();
-        if (result == null) {
-            return notFound().build();
-        }
-        return ok(result);
-    }
+	@GetMapping(value = "/{productId}")
+	public ResponseEntity<Product> getProduct(@PathVariable String productId) {
+		Product product = productService.getProduct(productId);
+		if (product == null) {
+			return notFound().build();
+		}
+		return ok(product);
+	}
+
+	@GetMapping(value = "/search/priceMoreThanThirty")
+	public ResponseEntity<List<Product>> getProductsWithPriceMoreThanThirty() {
+		List<Product> result = productService.getProductsWithPriceMoreThan30();
+		if (result == null) {
+			return notFound().build();
+		}
+		return ok(result);
+	}
 
 }

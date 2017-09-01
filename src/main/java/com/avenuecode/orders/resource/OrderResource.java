@@ -19,29 +19,30 @@ import static org.springframework.http.ResponseEntity.ok;
 @RequestMapping("/orders")
 public class OrderResource {
 
-    @Autowired
-    private OrderService orderService;
+	@Autowired
+	private OrderService orderService;
 
-    @GetMapping
-    public ResponseEntity<List<Order>> listOrders() {
-        return ok(orderService.listOrders());
-    }
+	@GetMapping
+	public ResponseEntity<List<Order>> listOrders() {
+		return ok(orderService.listOrders());
+	}
 
-    @GetMapping(value = "/{orderId}")
-    public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
-        Order order = orderService.getOrder(orderId);
-        if (order == null) {
-            return notFound().build();
-        }
-        return ok(order);
-    }
-    
-    @GetMapping(value = "/search/{searchCriteria}")
-    public ResponseEntity<List<Order>> getOrderByStatus(@PathVariable String searchCriteria) {
-    	
-    	List<Order> result = orderService.searchOrders(searchCriteria);
-    	if(result == null || result.size() == 0)
-    				return notFound().build();
-    	return ok(result);
-    }
+	@GetMapping(value = "/{orderId}")
+	public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
+		Order order = orderService.getOrder(orderId);
+		if (order == null) {
+			return notFound().build();
+		}
+		return ok(order);
+	}
+
+	@GetMapping(value = "/search/{searchCriteria}")
+	public ResponseEntity<List<Order>> getOrderByStatus(
+			@PathVariable String searchCriteria) {
+
+		List<Order> result = orderService.searchOrders(searchCriteria);
+		if (result == null || result.size() == 0)
+			return notFound().build();
+		return ok(result);
+	}
 }

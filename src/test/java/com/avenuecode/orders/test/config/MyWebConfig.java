@@ -6,20 +6,20 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-
-
 @EnableWebMvc
 @Configuration
 public class MyWebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry){
-        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-    }
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/static/**").addResourceLocations(
+				"/static/");
+	}
 
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer){
-        configurer.enable();
-    }
-    
+	@Override
+	public void configureDefaultServletHandling(
+			DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
+
 }

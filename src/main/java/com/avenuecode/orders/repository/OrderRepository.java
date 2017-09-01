@@ -11,10 +11,10 @@ import java.util.List;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Serializable> {
-	
+
 	public List<Order> findByStatus(String status);
-	
+
 	@Query("SELECT o FROM Order o WHERE o.discount != 0")
 	public List<Order> findByDiscount();
-		
+
 }

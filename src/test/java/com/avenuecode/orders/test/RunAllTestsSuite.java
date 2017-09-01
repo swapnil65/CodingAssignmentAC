@@ -10,11 +10,7 @@ import com.avenuecode.orders.test.service.TestOrdersService;
 import com.avenuecode.orders.test.service.TestProductsService;
 
 @RunWith(Suite.class)
-@SuiteClasses({
-    TestOrderResource.class,
-    TestProductResource.class,
-    TestOrdersService.class,
-    TestProductsService.class
-})
-
-public class RunAllTestsSuite {}
+@SuiteClasses({ TestOrderResource.class, TestProductResource.class,
+		TestOrdersService.class, TestProductsService.class })
+public class RunAllTestsSuite {
+}

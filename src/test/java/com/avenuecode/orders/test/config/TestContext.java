@@ -18,55 +18,54 @@ import com.avenuecode.orders.test.utility.MockProductsForTest;
 @Configuration
 public class TestContext {
 
-    @Bean
-    public MessageSource messageSource() {
-        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+	@Bean
+	public MessageSource messageSource() {
+		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
 
-        messageSource.setBasename("i18n/messages");
-        messageSource.setUseCodeAsDefaultMessage(true);
+		messageSource.setBasename("i18n/messages");
+		messageSource.setUseCodeAsDefaultMessage(true);
 
-        return messageSource;
-    }
+		return messageSource;
+	}
 
-    @Bean
-    public OrderService orderService() {
-        return Mockito.mock(OrderService.class);
-    }
-    
-    @Bean
-    public OrderRepository orderRepository() {
-        return Mockito.mock(OrderRepository.class);
-    }
-    
-    @Bean
-    public OrderResource orderResource() {
-        return new OrderResource();
-    }
-    
-    @Bean
-    public MockOrdersForTest mockOrdersForTest() {
-        return new MockOrdersForTest();
-    }
-    
-    @Bean
-    public ProductService productService() {
-        return Mockito.mock(ProductService.class);
-    }
-    
-    @Bean
-    public ProductRepository productRepository() {
-        return Mockito.mock(ProductRepository.class);
-    }
-    
-    @Bean
-    public ProductResource productResource() {
-        return new ProductResource();
-    }
-    
-    @Bean
-    public MockProductsForTest mockProductsForTest() {
-        return new MockProductsForTest();
-    }
-    
+	@Bean
+	public OrderService orderService() {
+		return Mockito.mock(OrderService.class);
+	}
+
+	@Bean
+	public OrderRepository orderRepository() {
+		return Mockito.mock(OrderRepository.class);
+	}
+
+	@Bean
+	public OrderResource orderResource() {
+		return new OrderResource();
+	}
+
+	@Bean
+	public MockOrdersForTest mockOrdersForTest() {
+		return new MockOrdersForTest();
+	}
+
+	@Bean
+	public ProductService productService() {
+		return Mockito.mock(ProductService.class);
+	}
+
+	@Bean
+	public ProductRepository productRepository() {
+		return Mockito.mock(ProductRepository.class);
+	}
+
+	@Bean
+	public ProductResource productResource() {
+		return new ProductResource();
+	}
+
+	@Bean
+	public MockProductsForTest mockProductsForTest() {
+		return new MockProductsForTest();
+	}
+
 }
-

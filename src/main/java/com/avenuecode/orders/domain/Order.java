@@ -54,11 +54,11 @@ public class Order implements Serializable {
 	private BigDecimal totalTax;
 
 	private BigDecimal grandTotal;
-	
+
 	public Order() {
-		
+
 	}
-	
+
 	public Order(String orderId, String orderNumber, BigDecimal discount,
 			BigDecimal taxPercent, BigDecimal total, BigDecimal totalTax,
 			BigDecimal grandTotal, String status, List<Product> products) {
@@ -73,8 +73,6 @@ public class Order implements Serializable {
 		this.status = status;
 		this.products = products;
 	}
-
-
 
 	@Column(length = 10)
 	private String status;
@@ -133,69 +131,80 @@ public class Order implements Serializable {
 	}
 
 	/**
-	 * @param orderId the orderId to set
+	 * @param orderId
+	 *            the orderId to set
 	 */
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
 
 	/**
-	 * @param orderNumber the orderNumber to set
+	 * @param orderNumber
+	 *            the orderNumber to set
 	 */
 	public void setOrderNumber(String orderNumber) {
 		this.orderNumber = orderNumber;
 	}
 
 	/**
-	 * @param discount the discount to set
+	 * @param discount
+	 *            the discount to set
 	 */
 	public void setDiscount(BigDecimal discount) {
 		this.discount = discount;
 	}
 
 	/**
-	 * @param taxPercent the taxPercent to set
+	 * @param taxPercent
+	 *            the taxPercent to set
 	 */
 	public void setTaxPercent(BigDecimal taxPercent) {
 		this.taxPercent = taxPercent;
 	}
 
 	/**
-	 * @param total the total to set
+	 * @param total
+	 *            the total to set
 	 */
 	public void setTotal(BigDecimal total) {
 		this.total = total;
 	}
 
 	/**
-	 * @param totalTax the totalTax to set
+	 * @param totalTax
+	 *            the totalTax to set
 	 */
 	public void setTotalTax(BigDecimal totalTax) {
 		this.totalTax = totalTax;
 	}
 
 	/**
-	 * @param grandTotal the grandTotal to set
+	 * @param grandTotal
+	 *            the grandTotal to set
 	 */
 	public void setGrandTotal(BigDecimal grandTotal) {
 		this.grandTotal = grandTotal;
 	}
 
 	/**
-	 * @param status the status to set
+	 * @param status
+	 *            the status to set
 	 */
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
 	/**
-	 * @param products the products to set
+	 * @param products
+	 *            the products to set
 	 */
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -206,7 +215,5 @@ public class Order implements Serializable {
 				+ ", grandTotal=" + grandTotal + ", status=" + status
 				+ ", products=" + products + "]";
 	}
-	
-	
 
 }
