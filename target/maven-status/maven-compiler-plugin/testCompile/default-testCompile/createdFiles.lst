@@ -1,0 +1,9 @@
+com/avenuecode/orders/test/TestOrdersService.class
+com/avenuecode/orders/test/MyWebConfig.class
+com/avenuecode/orders/test/TestContext.class
+com/avenuecode/orders/test/RunAllTestsSuite.class
+com/avenuecode/orders/test/TestProductsService.class
+com/avenuecode/orders/test/utility/MockOrdersForTest.class
+com/avenuecode/orders/test/utility/MockProductsForTest.class
+com/avenuecode/orders/test/TestOrderResource.class
+com/avenuecode/orders/test/TestProductResource.class
